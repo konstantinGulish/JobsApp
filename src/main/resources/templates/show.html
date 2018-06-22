@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Job List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/site.css}"/>
+</head>
+<body>
+<div class="jumbotron text-center">
+    <h1>Job Details:</h1>
+</div>
+<ul class="list-group">
+    <li class="list-group-item"> Position Title: </li>
+    <li class="list-group-item active" th:text="${job.position}"></li>
+    <li class="list-group-item"> Company Name: </li>
+    <li class="list-group-item active" th:text="${job.company}"></li>
+    <li class="list-group-item"> Requirements: </li>
+    <li class="list-group-item active" th:text="${job.requirements}"></li>
+    <li class="list-group-item"> Desired Skills: </li>
+    <li class="list-group-item active" th:text="${job.desiredSkills}"></li>
+</ul>
+</body>
+</html>

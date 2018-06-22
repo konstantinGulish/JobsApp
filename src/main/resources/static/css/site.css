@@ -1,0 +1,24 @@
+body {
+    background: url("/img/background.jpg");
+}
+textarea {
+    width: 100%;
+}
+input {
+    width: 100%;
+}
+
+label {
+    color: white;
+}
+
+p {
+    color: white;
+}
+title {
+    color: white;
+    font-weight: bold;
+}
+
+
+

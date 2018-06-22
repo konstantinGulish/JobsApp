@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Job Information</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/site.css}"/>
+</head>
+<body>
+    <!-- A main horizontal navbar -->
+    <nav class="navbar navbar-expand-sm bg-light">
+        <!--Links-->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/addjob}">Add Job</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/showjobs}">Show Jobs</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container fluid-container">
+    <p>Enter information about a job opening:</p>
+    <form th:action="@{/process}" th:object="${job}" method="post">
+        <div class="form-group">
+        <input type ="hidden" th:field ="*{id}" />
+        <label for="position"> Job Title:</label>
+        <input type="text" id = "position" th:field="*{position}">
+        </div><!--code-group-->
+        <div class="form-group">
+        <label for="company"> Company:</label>
+        <input type="text" id = "company" th:field="*{company}">
+        </div><!--code-group-->
+        <div class="form-group">
+        <p> Job Requirements:</p>
+        <textarea rows ="3" th:field="*{requirements}" />
+        </div><!--code-group-->
+        <div class="form-group">
+        <label for="desiredSkills"> Desired Skills:</label>
+        <input type="text" id = "desiredSkills" th:field="*{desiredSkills}">
+        </div><!--code-group-->
+        <input type="submit" value="Submit Job">
+    </form>
+    </div>
+</body>
+</html>
