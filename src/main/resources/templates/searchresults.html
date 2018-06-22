@@ -2,18 +2,18 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Main Page</title>
+    <title>Search Results</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" th:href="@{/css/site.css}"/>
 </head>
+<body>
 <!-- A main horizontal navbar with logo -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <a class="navbar-brand" th:href="@{/}">
         <!-- logo -->
         <img class = "logo" src="/img/logo.jpg" alt="Logo" style="width:40px;">
     </a>
-    <!-- search form -->
-    <form class="form-inline" th:action="@{/searchresults}" method = post>
+    <form class="form-inline">
         <input class="form-control mr-sm-2" type="text" placeholder="Search">
         <button class="btn btn-success" type="submit">Search</button>
     </form>
@@ -30,9 +30,13 @@
         </li>
     </ul>
 </nav>
-    <div class="jumbotron text-center">
-        <h1 class = "display-1">Jobs Portal</h1>
-    </div>
-<body>
+<div class="jumbotron text-center">
+    <h1>Search Results</h1>
+</div>
+<ul class="list-group">
+    <li class="list-group-item active">Junior Software Developer: Spire Systems, LLC - Germantown, MD</li>
+    <li class="list-group-item active">System Administrator: Belle Financial Services - Baltimore, MD</li>
+
+</ul>
 </body>
 </html>
